@@ -2,7 +2,8 @@
 
 > Transform qualitative feedback into actionable insights using AI-powered analysis
 
-A modern web application that leverages **LangChain.js** and **Google Gemini AI** to analyze survey responses, extract structured insights, and generate strategic recommendations. Perfect for businesses looking to understand customer feedback at scale.
+A modern web application that leverages **LangChain.js** and **Google Gemini AI** to analyze survey responses, extract structured insights, and generate strategic recommendations. Perfect for businesses looking to understand customer feedback at scale. 
+Note: This project is "vibe coded." The primary purpose of this prototype is to build a functional understanding of LangChain and how to bridge raw survey data with AI-driven insights.
 
 ![Tech Stack](https://img.shields.io/badge/LangChain.js-FF6B6B?style=for-the-badge&logo=langchain&logoColor=white)
 ![Gemini AI](https://img.shields.io/badge/Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
