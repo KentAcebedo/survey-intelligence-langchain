@@ -6,7 +6,7 @@ import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
  */
 async function getAvailableModels(apiKey) {
     try {
-        console.log('🔍 Fetching available models from Google API...');
+        console.log(' Fetching available models from Google API...');
         const response = await fetch(
             `https://generativelanguage.googleapis.com/v1/models?key=${apiKey}`
         );
@@ -18,7 +18,7 @@ async function getAvailableModels(apiKey) {
         const data = await response.json();
         
         if (data.models && data.models.length > 0) {
-            console.log('📋 Found available models:');
+            console.log(' Found available models:');
             const modelNames = data.models.map(model => {
                 // Extract model name (remove 'models/' prefix if present)
                 const name = model.name.replace('models/', '');
@@ -27,11 +27,11 @@ async function getAvailableModels(apiKey) {
             });
             return modelNames;
         } else {
-            console.warn('⚠️ No models found in API response');
+            console.warn('No models found in API response');
             return [];
         }
     } catch (error) {
-        console.error('❌ Error fetching models:', error);
+        console.error(' Error fetching models:', error);
         return [];
     }
 }
@@ -84,12 +84,12 @@ export async function initializeGeminiModel(apiKey) {
                 { role: "user", content: "hi" }
             ]);
             
-            console.log(`✅ SUCCESS! Initialized with: ${modelName}`);
+            console.log(` SUCCESS! Initialized with: ${modelName}`);
             return model;
             
         } catch (error) {
             const errorMsg = error.message || String(error);
-            console.warn(`  ❌ ${modelName} failed:`, errorMsg.substring(0, 100));
+            console.warn(`  ${modelName} failed:`, errorMsg.substring(0, 100));
             lastError = error;
         }
     }
@@ -97,7 +97,7 @@ export async function initializeGeminiModel(apiKey) {
     // If all fail, provide detailed error
     const errorDetails = lastError?.message || 'Unknown error';
     throw new Error(
-        `❌ All ${uniqueModels.length} model(s) failed to initialize.\n\n` +
+        ` All ${uniqueModels.length} model(s) failed to initialize.\n\n` +
         `Last error: ${errorDetails}\n\n` +
         `Available models found: ${availableModels.length > 0 ? availableModels.join(', ') : 'none'}\n\n` +
         `Troubleshooting:\n` +
