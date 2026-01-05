@@ -4,6 +4,7 @@
 
 A modern web application that leverages **LangChain.js** and **Google Gemini AI** to analyze survey responses, extract structured insights, and generate strategic recommendations. 
 Perfect for businesses looking to understand customer feedback at scale. 
+
 **Link**: https://langchain-survey-analysis.netlify.app/
 
 ## Note: This project is "vibe coded." The primary purpose of this prototype is to build a functional understanding of LangChain and how to bridge raw survey data with AI-driven insights.
