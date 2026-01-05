@@ -118,7 +118,7 @@ async function runAnalysis(){
     const responseCount = surveyText.split('\n').filter(line => line.trim().length > 0).length;
     console.log(`Analyzing ${responseCount} survey responses...`);
 
-    resultArea.innerHTML = '<p class="text-blue-600">🔄 Analyzing survey responses... This may take a moment.</p>';
+    resultArea.innerHTML = '<p class="text-blue-600"> Analyzing survey responses... This may take a moment.</p>';
     analyzeButton.disabled = true;
     analyzeButton.textContent = 'Analyzing...';
 
@@ -207,7 +207,7 @@ function displayResults(analysis, recommendation) {
             <!-- Statistics Dashboard -->
             ${stats ? `
             <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">📊 Survey Statistics</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-4"> Survey Statistics</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="bg-white p-4 rounded-lg shadow-sm">
                         <div class="text-3xl font-bold text-blue-600">${stats.total || 'N/A'}</div>
@@ -234,7 +234,7 @@ function displayResults(analysis, recommendation) {
             
             <!-- Analysis Section -->
             <div class="border-b border-gray-200 pb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">📈 Detailed Analysis</h3>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3"> Detailed Analysis</h3>
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <pre class="whitespace-pre-wrap text-sm text-gray-700 font-sans">${analysis}</pre>
                 </div>
@@ -242,7 +242,7 @@ function displayResults(analysis, recommendation) {
             
             <!-- Recommendation Section -->
             <div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">💡 Strategic Recommendations</h3>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3"> Strategic Recommendations</h3>
                 <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                     <pre class="whitespace-pre-wrap text-sm text-gray-700 font-sans">${recommendation}</pre>
                 </div>
